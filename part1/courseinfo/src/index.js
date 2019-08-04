@@ -17,14 +17,14 @@ const Content = props => (
   </div>
 );
 
-const Total = props => (
-  <p>
-    Number of exercises{" "}
-    {props.parts[0].exercises +
-      props.parts[1].exercises +
-      props.parts[2].exercises}
-  </p>
-);
+const Total = props => {
+  const total =
+    props.parts[0].exercises +
+    props.parts[1].exercises +
+    props.parts[2].exercises;
+
+  return <p>Number of exercises {total}</p>;
+};
 
 const App = () => {
   const course = {
