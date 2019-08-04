@@ -1,0 +1,24 @@
+note over browser:
+user writes something into the text field and clicks
+the submit button
+end note
+
+note over browser:
+browser creates a new note with the content of user's
+input, pushes it into notes array and invokes function
+to re-render the note list as well as send request to
+server
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note right of browser:
+browser sends request to server with user's input in JSON format
+end note
+
+note over server:
+server creates a new note with the content of user's
+input (request body) and pushes it into notes array
+end note
+
+server-->browser: HTTP status code 201 with "note created" message
