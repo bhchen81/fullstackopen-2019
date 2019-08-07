@@ -10,7 +10,7 @@ const BasicInfo = ({ country }) => (
 
 const Languages = ({ data }) => {
   const languages = data.map(language => (
-    <li key={language.name}>{language.name}</li>
+    <li key={language.iso639_1}>{language.name}</li>
   ));
 
   return (
